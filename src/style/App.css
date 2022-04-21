@@ -64,4 +64,7 @@ button {
 
 .video{
   width: 100%;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  overflow: hidden;
 }

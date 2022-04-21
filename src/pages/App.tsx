@@ -10,7 +10,7 @@ import imgNext from '../../img/next.png';
 const App = () => {
 
   const [width, setWidth] = useState();
-  const [height, setHeight] = useState<number | null>();
+  const [height, setHeight] = useState<string | number | undefined>();
   const ref = useRef(null);
 
   const opts = {
