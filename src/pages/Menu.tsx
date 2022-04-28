@@ -1,5 +1,6 @@
 import React from 'react';
 import ProgressBar from "@ramonak/react-progress-bar";
+import { Link } from 'react-router-dom';
 
 import { useState } from 'react'
 import netruc from '../../img/NETRUC.png'
@@ -14,22 +15,22 @@ const Menu = () => {
     <div className='Menu'>
         <header className='headerMenu profil'>
             <div className='flex divMenu'>
-                <a href="/Param" className='imgMenu imgUtil'>
-                    <img src={imgProfil}/>
-                </a>
+                <Link to="/Param">
+                    <img src={imgProfil} className='imgMenu imgUtil'/>
+                </Link>
                 <span className='util'>Invité</span>
                 <span className='imgStars'>14<img src={imgStars}/></span>
                 <ProgressBar className='progBar' completed={80} bgColor="#DB202C" baseBgColor='#FFFFFF' />
             </div>
             <div className='flex netruc'>
-                <a href="/">
+                <Link to='/'>
                     <img src={netruc} alt="logo" />
-                </a>
+                </Link>
             </div>
             <div className='flex imgQuest'>
-                <a href="/Param" className='imgMenu'>
-                    <img src={imgQuest}/>
-                </a>
+                <Link to='/Param'>
+                    <img src={imgQuest} className='imgMenu'/>
+                </Link>
             </div>
         </header>
     </div>
