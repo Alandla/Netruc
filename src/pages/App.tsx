@@ -1,11 +1,10 @@
 import React from 'react';
-import YouTube, { YouTubeProps } from 'react-youtube';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { useState } from 'react'
 import '../style/App.css'
 
-import imgFav from '../../img/Favori.png';
-import imgNext from '../../img/next.png';
+import Home from "./Home";
+import Param from "./Param";
 
 const opts = {
   height: '720',
@@ -21,15 +20,12 @@ const opts = {
 const App = () => {
 
   return (
-    <div className='App'>
-      <div className='container'>
-        <img src={imgNext} className='imgFav'/>
-        <img src={imgFav} className='imgFav'/>
-        <div className='content'>
-          <YouTube videoId="2g811Eo7K8U" opts={opts}/>
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/Param" element={<Param />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
