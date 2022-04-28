@@ -56,4 +56,12 @@ button {
   bottom: 0;
   background-color: #3B3B3F;
   border-radius: 20px;
+  padding: 15px;
+}
+
+.video{
+  width: 100%;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  overflow: hidden;
 }

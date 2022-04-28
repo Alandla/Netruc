@@ -8,18 +8,12 @@
 
 .headerMenu {
     height: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
     display: flex;
-}
-
-.ant-switch {
-  background-color: #45444B;
-  margin-left: 10px;
-  margin-top: 40px;
-  width: 60px;
-}
-
-.ant-switch-checked {
-  background-color: #DB202C !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .netruc {
@@ -37,38 +31,47 @@
 .divMenu {
   background-color: #0C0B0B;
   margin-right: 20px;
+  -ms-flex-item-align: auto;
+}
+
+.imgMenu {
+  float: right;
+  text-align: right;
+}
+
+.imgUtil {
+  float: left;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.imgMenu {
-    background-color: #0C0B0B;
-    text-align: right;
-    margin-right: 20px;
-    margin-top: auto;
-    margin-bottom: auto;
+.imgQuest {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.profil {
+.imgStars {
+  float: left;
+  position: absolute;
+}
+
+.util {
+  float: left;
+  float: top;
+  font-weight: bold;
+  font-size: large;
+}
+
+.progBar {
+  float: left;
+  margin-left: 10px;
+  width: 200px;
+  border: 4px solid white;
+  border-radius: 50px;
+}
+
+.flex {
   color: white;
-  margin-left: 5%;
-}
-
-.quest {
-  margin-right: 5%;
-}
-
-.imgSwitch {
-  z-index: 2;
-  position: absolute;
-  margin-top: 10px;
-  margin-left: 9px;
-  height: 15px;
-  width: 15px;
-}
-
-.imgSwitch:before {
-  position: absolute;
-  -webkit-transition: .4s;
-  transition: 4s;
+  background-color: #0C0B0B;
+  flex: 1;
 }

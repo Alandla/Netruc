@@ -6,8 +6,7 @@ import Menu from './pages/Menu'
 
 ReactDOM.render(
   <React.StrictMode>
-  <Menu />
-  <App />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
   )
