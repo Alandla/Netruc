@@ -6,6 +6,7 @@ import '../style/App.css'
 import Menu from "./Menu";
 import Home from "./Home";
 import Param from "./Param";
+import Trophe from "./Trophe";
 
 const App = () => {
 
@@ -16,6 +17,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/Param" element={<Param />} />
+          <Route path="/Trophe" element={<Trophe />}/>
         </Routes>
       </BrowserRouter>
     </div>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { useState } from 'react'
 import netruc from '../../img/NETRUC.png'
-import imgQuest from '../../img/Quest.png'
+import imgTrophe from '../../img/Trophe.png'
 import imgProfil from '../../img/utilisateur.png'
 import imgStars from '../../img/Stars.png'
 import '../style/Menu.css'
@@ -28,8 +28,8 @@ const Menu = () => {
                 </Link>
             </div>
             <div className='flex imgQuest'>
-                <Link to='/Param'>
-                    <img src={imgQuest} className='imgMenu'/>
+                <Link to='/Trophe'>
+                    <img src={imgTrophe} className='imgMenu'/>
                 </Link>
             </div>
         </header>
