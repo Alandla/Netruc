@@ -1,0 +1,66 @@
+/* --------------------------------- Trophée ------------------------------------- */
+
+.Trophe {
+    text-align: center;
+    background-color: #0C0B0B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.titreTrophe {
+    margin-top: 3%;
+}
+
+.childTitreTrophe {
+    margin-left: 75px;
+}
+
+.Objectif {
+    width: 60%;
+    height: 20%;
+    margin-top: 1%;
+    border-radius: 20px;
+    background-color: #2F2E31;
+    display: flex;
+    align-items: center;
+}
+
+.flexTroph {
+    flex: 1;
+    background-color: #2F2E31;
+}
+
+.circleBar {
+    width: 20%;
+    height: 70%;
+    margin-left: 3%;
+    float: left;
+}
+
+.texteObj {
+    text-align: left;
+}
+
+.Right {
+    display: flex;
+    justify-content: end;
+}
+
+.circle {
+    float: right;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: #0C0B0B;
+    border-radius: 50%;
+  }
+
+
+.text {
+    margin: auto;
+  }
