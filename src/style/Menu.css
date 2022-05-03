@@ -58,15 +58,16 @@
 
 .util {
   float: left;
-  float: top;
   font-weight: bold;
   font-size: large;
+  margin-left: 10px;
 }
 
 .progBar {
   float: left;
-  margin-left: 10px;
-  width: 200px;
+  margin-left: 15px;
+  width: 40%;
+  min-width: 150px;
   border: 4px solid white;
   border-radius: 50px;
 }
