@@ -18,8 +18,10 @@ const Menu = () => {
                 <Link to="/Param">
                     <img src={imgProfil} className='imgMenu imgUtil'/>
                 </Link>
-                <span className='util'>Invité</span>
-                <span className='imgStars'>14<img src={imgStars}/></span>
+                <div>
+                    <span className='util'>Invité</span>
+                    <span className='imgStars'>14<img src={imgStars}/></span>
+                </div>
                 <ProgressBar className='progBar' completed={80} bgColor="#DB202C" baseBgColor='#FFFFFF' />
             </div>
             <div className='flex netruc'>
