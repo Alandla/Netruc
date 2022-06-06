@@ -10,8 +10,8 @@ const Succes = () => {
     return(
         <div className='Succes'>
             <div className='titreSucces'>
-                <span>OBJECTIFS</span>
-                <span className='childTitreSucces'>SUCCÈS</span>
+            <Link to="/Trophe"><span>OBJECTIFS</span></Link>
+                <span className='childTitreTrophe textGras'>SUCCÈS</span>
             </div>
             <div className='container-succes'>
                 <div>NOMBRE DE VUES</div>
@@ -21,7 +21,7 @@ const Succes = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Succes
