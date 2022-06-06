@@ -28,6 +28,7 @@
     background-color: #2F2E31;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .flexTroph {
@@ -46,21 +47,50 @@
     text-align: left;
 }
 
+.texteTitre {
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.texteDesc {
+    font-size: 22px;
+    font-weight: 400;
+}
+
 .Right {
     display: flex;
-    justify-content: end;
+    flex-direction: column;
+    align-items: center;
 }
 
 .circle {
-    float: right;
-    display: flex;
     width: 100px;
     height: 100px;
     background-color: #0C0B0B;
     border-radius: 50%;
-  }
+}
 
 
 .text {
-    margin: auto;
-  }
+    margin-top: 30px;
+    font-size: 24px;
+    align-items: center;
+}
+
+.textGras {
+    font-weight: bold;
+}
+
+.BorderRouge {
+    border: 4px solid #DB202C;
+}
+
+.Recup {
+    align-items: center;
+    width: 226px;
+    height: 60px;
+    background-color: #DB202C;
+    position: absolute;
+    border-radius: 15px;
+    margin-top: 10%;
+}
