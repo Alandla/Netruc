@@ -1,16 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-    CircularProgressbar,
-    CircularProgressbarWithChildren,
-    buildStyles
-} from "react-circular-progressbar";
 
 import "react-circular-progressbar/dist/styles.css";
-import '../style/Trophe.css'
+import '../style/Succes.css'
+import CardSuccess from '../components/CardSuccess';
 
 const Succes = () => {
-
+    
+    return(
+        <div className='Succes'>
+            <div className='titreSucces'>
+                <span>OBJECTIFS</span>
+                <span className='childTitreSucces'>SUCCÈS</span>
+            </div>
+            <div className='container-succes'>
+                <div>NOMBRE DE VUES</div>
+                <div className='container-list-succes'>
+                    <CardSuccess state={"end"} nb={10} date={'10/02/2022'}/>
+                    <CardSuccess state={"active"} nb={50} date={' '}/>
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default Succes

@@ -35,6 +35,13 @@
   -ms-flex-item-align: auto;
 }
 
+.userInfo{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  margin-left: 10px;
+}
+
 .imgMenu {
   float: right;
   text-align: right;
@@ -52,15 +59,12 @@
 }
 
 .imgStars {
-  float: left;
-  position: absolute;
+  
 }
 
 .util {
-  float: left;
   font-weight: bold;
   font-size: large;
-  margin-left: 10px;
 }
 
 .progBar {

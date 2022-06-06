@@ -18,7 +18,7 @@ const Menu = () => {
                 <Link to="/Param">
                     <img src={imgProfil} className='imgMenu imgUtil'/>
                 </Link>
-                <div>
+                <div className='userInfo'>
                     <span className='util'>Invité</span>
                     <span className='imgStars'>14<img src={imgStars}/></span>
                 </div>
