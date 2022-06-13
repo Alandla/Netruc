@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
 
-    const googleKey = "AIzaSyAt5O2zyVfmDE7PwJiZZz6X19SW0y2HpzM"
+    const googleKey = "AIzaSyDy8Ffsa3uArpVPixo0b46IZe-jBZeEMNY"
 
     const [width, setWidth] = useState();
     const [height, setHeight] = useState<string | number | undefined>();
@@ -22,7 +22,6 @@ const Home = () => {
         autoplay: 1,
         rel: 0,
         loop: 1,
-        controls: 0,
       },
     };
   
@@ -38,28 +37,28 @@ const Home = () => {
     })
 
     function getRandomVid() {
-      var data;
-      var keyname = "mdpg"
       var url = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&key=' + googleKey;
 
       fetch(url)
-      .then(res => res.json())
-      .then((result) => {
+        .then(res => res.json())
+        .then((result) => {
 
-        setIdVid(result.items[0].id.videoId)
+          setIdVid(result.items[0].id.videoId)
 
       })
     }
 
-    getRandomVid();
+    if(idVid == null){
+      getRandomVid();
+    }
 
     console.log("Get video: " + idVid)
 
     return (
       <div className='App'>
           <div className='container'>
-              <img src="../../img/next.png" className='imgFav'/>
-              <img src="../../img/Favori.png" className="imgFav"/>
+              <img src="../../img/next.png" className='imgFav' onClick={getRandomVid}/>
+              <img src="../../img/fav-1.png" className="imgFav"/>
               <div className='content' ref={ref}>
                 <YouTube className="video" videoId={idVid} opts={opts}/>
               </div>
@@ -68,4 +67,4 @@ const Home = () => {
     );
   };
   
-  export default Home
+  export default Home;

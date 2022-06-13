@@ -9,9 +9,9 @@ const Succes = () => {
     
     return(
         <div className='Succes'>
-            <div className='titreSucces'>
-            <Link to="/Trophe"><span>OBJECTIFS</span></Link>
-                <span className='childTitreTrophe textGras'>SUCCÈS</span>
+            <div className='navObjSucc'>
+                <Link to="/Trophe"><span className='textLight'>OBJECTIFS</span></Link>
+                <span className='textGras'>SUCCÈS</span>
             </div>
             <div className='container-succes'>
                 <div>NOMBRE DE VUES</div>

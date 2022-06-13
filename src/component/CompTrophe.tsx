@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import {
     CircularProgressbar,
     CircularProgressbarWithChildren,
@@ -9,45 +7,38 @@ import {
 import "react-circular-progressbar/dist/styles.css";
 import '../style/Trophe.css'
 
-var imgPlay;
 
-const CompTrophe = ({ valeur, valeurMax, image, texte1, texte2, exp, border }: any) => {
+const CompTrophe = ({ valeur, valeurMax, type, texte1, description, exp, state }: any) => {
 
-    if (image == "1") {
-        imgPlay = '../../img/Play.png'
-    } else {
-        imgPlay = '../../img/Favori.png'
-    }
-
-    if (border == "1") {
-        border = "Objectif"
-    } else {
-        border = "Objectif BorderRouge"
+    var button;
+    if(state === "end"){
+        button =  <div className='Recup'>Récupérer</div>;
     }
 
     return (
-        <div className={border}>
-            <CircularProgressbar value={valeur} text={`${valeur}`} maxValue={valeurMax} className='circleBar flexTroph' styles={buildStyles({
-                textColor: "#DB202C",
-                pathColor: "#DB202C",
-                trailColor: "#000000"
-            })} />
-            <span className='texteObj flexTroph'>
-                <img src={imgPlay} />
-                <span className='texteTitre'> {texte1} </span>
-                <br />
-                <span className='texteDesc'> {texte2} </span>
-            </span>
-            <div className='Right flexTroph'>
-                <span>Récompense</span>
-                <div className='circle'>
-                    <p className='text'>+{exp} XP</p>
+        <>
+            <div className={'Objectif ' + state}>
+                <CircularProgressbar value={valeur} text={`${valeur}`} maxValue={valeurMax} className='circleBar flexTroph' styles={buildStyles({
+                    textColor: "#DB202C",
+                    pathColor: "#DB202C",
+                    trailColor: "#000000"
+                })} />
+                <div className='text'>
+                    <div>
+                        <img src={'../../img/objectifs/icon_' + type + '.png'} />
+                        <span className='texteTitre'> {'Nombre de ' + type} </span>
+                    </div>
+                    <span className='texteDesc'> {description} </span>
+                </div>
+                <div className='Right flexTroph'>
+                    <span>Récompense</span>
+                    <div className='circle'>
+                        <p className='text-exp'>+{exp} XP</p>
+                    </div>
                 </div>
             </div>
-            <div className='Recup'>
-                Récupérer
-            </div>
-        </div>
+            {button}
+        </>
     );
 };
 
