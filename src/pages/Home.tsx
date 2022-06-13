@@ -2,6 +2,8 @@ import React from 'react';
 import YouTube, { YouTubeProps } from 'react-youtube';
 
 import '../style/App.css'
+import nextIcon from '../../img/next.png'
+import favIcon from '../../img/fav-1.png'
 
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom';
@@ -67,8 +69,8 @@ const Home = () => {
     return (
       <div className='App'>
           <div className='container'>
-              <img src="../../img/next.png" className='imgFav' onClick={getRandomVid}/>
-              <img src="../../img/fav-1.png" className="imgFav"/>
+              <img src={nextIcon} onClick={getRandomVid}/>
+              <img src={favIcon} className="imgFav"/>
               <div className='content' ref={ref}>
                 {yt}
               </div>

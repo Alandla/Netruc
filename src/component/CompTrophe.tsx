@@ -6,6 +6,8 @@ import {
 
 import "react-circular-progressbar/dist/styles.css";
 import '../style/Trophe.css'
+import iconvues from '../../img/objectifs/icon_vues.png'
+import iconfavoris from '../../img/objectifs/icon_favoris.png'
 
 
 const CompTrophe = ({ valeur, valeurMax, type, texte1, description, exp, state }: any) => {
@@ -13,6 +15,13 @@ const CompTrophe = ({ valeur, valeurMax, type, texte1, description, exp, state }
     var button;
     if(state === "end"){
         button =  <div className='Recup'>Récupérer</div>;
+    }
+
+    var img;
+    if (type === "vues") {
+        img = iconvues
+    } else if (type === "favoris") {
+        img = iconfavoris
     }
 
     return (
@@ -25,7 +34,7 @@ const CompTrophe = ({ valeur, valeurMax, type, texte1, description, exp, state }
                 })} />
                 <div className='text'>
                     <div>
-                        <img src={'../../img/objectifs/icon_' + type + '.png'} />
+                        <img src={img} />
                         <span className='texteTitre'> {'Nombre de ' + type} </span>
                     </div>
                     <span className='texteDesc'> {description} </span>
