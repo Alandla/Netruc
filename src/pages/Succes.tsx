@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import "react-circular-progressbar/dist/styles.css";
 import '../style/Succes.css'
-import CardSuccess from '../components/CardSuccess';
+import CardSuccess from '../component/CardSuccess';
 
 const Succes = () => {
     

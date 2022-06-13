@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../style/components/CardSuccess.css'
+import '../style/component/CardSuccess.css'
 import imgLockRedfrom from '../../img/red-lock.png'
 import imgTropheeRed from '../../img/red-trophe.png'
 
