@@ -13,21 +13,25 @@ const Menu = () => {
 
     return (
     <div className='Menu'>
-        <header className='headerMenu profil'>
-            <div className='flex divMenu'>
+        <header className='headerMenu'>
+            <div className='divMenu'>
                 <Link to="/Param">
                     <img src={imgProfil} className='imgMenu imgUtil'/>
                 </Link>
-                <span className='util'>Invité</span>
-                <span className='imgStars'>14<img src={imgStars}/></span>
-                <ProgressBar className='progBar' completed={80} bgColor="#DB202C" baseBgColor='#FFFFFF' />
+                <div className='userInfo'>
+                    <div>
+                        <span className='util'>Invité</span>
+                        <span className='imgStars'>14<img src={imgStars}/></span>
+                    </div>
+                    <ProgressBar className='progBar' completed={80} bgColor="#DB202C" baseBgColor='#FFFFFF' />
+                </div>
             </div>
-            <div className='flex netruc'>
+            <div className='netruc'>
                 <Link to='/'>
                     <img src={netruc} alt="logo" />
                 </Link>
             </div>
-            <div className='flex imgQuest'>
+            <div className='imgQuest'>
                 <Link to='/Trophe'>
                     <img src={imgTrophe} className='imgMenu'/>
                 </Link>

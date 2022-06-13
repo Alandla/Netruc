@@ -7,7 +7,7 @@ import Menu from "./Menu";
 import Home from "./Home";
 import Param from "./Param";
 import Trophe from "./Trophe";
-import Succes from "./Succes";
+import Succes from './Succes';
 
 const App = () => {
 

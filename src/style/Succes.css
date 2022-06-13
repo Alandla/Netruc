@@ -1,0 +1,29 @@
+.Succes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.container-list-succes{
+    display: flex;
+    flex-direction: row;
+}
+
+.container-list-succes > div {
+    margin-right: 42px;
+  }
+
+.navObjSucc {
+    display: flex;
+    gap: 25px;
+    margin-top: 3%;
+}
+
+.container-succes{
+    text-align: left;
+    width: 100%;
+    padding-top: 40px;
+    padding-left: 100px;
+}
