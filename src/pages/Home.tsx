@@ -10,18 +10,23 @@ const Home = () => {
 
     const googleKey = "AIzaSyDy8Ffsa3uArpVPixo0b46IZe-jBZeEMNY"
 
-    const [width, setWidth] = useState();
+    const [width, setWidth] = useState<string | number | undefined>();
     const [height, setHeight] = useState<string | number | undefined>();
     const [idVid, setIdVid] = useState<string>();
+    const [idVidBefore, setIdVidBefore] = useState<string>();
     const ref = useRef(null);
+
+    const autoplay = 1;
+    const rel = 0;
+    const loop = 1;
   
     const opts = {
       height: height,
       width: width,
       playerVars: {
-        autoplay: 1,
-        rel: 0,
-        loop: 1,
+        autoplay: autoplay,
+        rel: rel,
+        loop: loop,
       },
     };
   
@@ -43,6 +48,7 @@ const Home = () => {
         .then(res => res.json())
         .then((result) => {
 
+          setIdVidBefore(idVid);
           setIdVid(result.items[0].id.videoId)
 
       })
@@ -50,7 +56,11 @@ const Home = () => {
 
     if(idVid == null){
       getRandomVid();
+      setIdVid("0")
     }
+
+    //@ts-ignore
+    const yt = <YouTube className="video" videoId={idVid} opts={opts}/>;
 
     console.log("Get video: " + idVid)
 
@@ -60,7 +70,7 @@ const Home = () => {
               <img src="../../img/next.png" className='imgFav' onClick={getRandomVid}/>
               <img src="../../img/fav-1.png" className="imgFav"/>
               <div className='content' ref={ref}>
-                <YouTube className="video" videoId={idVid} opts={opts}/>
+                {yt}
               </div>
           </div>
       </div>
