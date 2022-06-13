@@ -69,7 +69,7 @@ const Home = () => {
     return (
       <div className='App'>
           <div className='container'>
-              <img src={nextIcon} onClick={getRandomVid}/>
+              <img src={nextIcon} className="imgFav" onClick={getRandomVid}/>
               <img src={favIcon} className="imgFav"/>
               <div className='content' ref={ref}>
                 {yt}
